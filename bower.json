@@ -1,7 +1,7 @@
 {
   "name": "ephemeris",
   "description": "API pour récupérer les éphémérides du jour ou d'un jour de l'année.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": [
     "src/ephemeris.js",
     "src/ephemeris.json"

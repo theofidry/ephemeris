@@ -58,6 +58,12 @@ La liste des éphémérides varie beaucoup d'une source à une autre, car il exi
 
 Le cas où il y a plusieurs éphémérides le même jour est aussi à traiter, actuellement un seul nom a été selectionné.
 
+### Bower
+
+La bibliothèque est enregistrée comme un package Bower. Ne pas oublier de mettre à jour le fichier `bower.json`. Le paquet est automatiquement mis à jour une fois le push fait sur GitHub.
+
+Pour le versions, le premier chiffre correspond à une mise à jour majeure (ajout d'un wrapper par exemple), le second à une version mineure (ajout d'une fonctionnalité), et le troisième pour l'ajout d'un patch.
+
 ### Javascript
 
 La bibliothèque Javascript est testée avec [Jasmine](//jasmine.github.io/). Pour lancer les tests unitaires, accéder au fichier `SpecRunner.html`. Les specs sont implémentées dans le dossier `spec`. Pour plus d'information sur Jasmine, consulter leur site [site officiel](//jasmine.github.io/).
