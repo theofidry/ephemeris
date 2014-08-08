@@ -42,32 +42,75 @@ function getMonth(month) {
 }
 
 
+/**
+ * Get the full ephemeris.<br />
+ * <br />
+ * If invalid or incorrect parameter, undefined is returned.
+ *
+ * @param {integer} day
+ *  index from 1 to 31
+ * @param {integer} month
+ *   index from 1 to 12
+ * @returns {string|undefined}
+ */
 function getEphemeris(day, month) {
 
-  //TODO
-  return undefined
+  try {
+    var prefix = getMonth(month)[day-1][1];
+
+    return (prefix === '')?
+             getMonth(month)[day-1][0]:
+             prefix + ' ' + getMonth(month)[day-1][0];
+  } catch (err) {
+    return undefined;
+  }
 }
 
+
+/**
+ * Get the ephemeris name (without the prefix).
+ * E.g. if the ephemeris is 'Saint Ella', the string 'Ella' will be returned.<br />
+ * <br />
+ * If invalid or incorrect parameter, undefined is returned.
+ *
+ * @param {integer} day
+ *  index from 1 to 31
+ * @param {integer} month
+ *   index from 1 to 12
+ * @returns {string|undefined}
+ */
 function getEphemerisName(day, month) {
 
-  return getMonth(month)[day-1][0];
+  try {
+    return getMonth(month)[day-1][0];
+  } catch (err) {
+    return undefined;
+  }
 }
 
 
+/**
+ * Get today ephemeris.
+ *
+ * @returns {string|undefined}
+ */
 function getTodayEphemeris() {
 
-  //TODO
-  return undefined
+  today = new Date();
+
+  return getEphemeris(today.getDate(), today.getMonth() + 1);
 }
 
+
+/**
+ * Get today ephemeris name (without the prefix).
+ * E.g. if the ephemeris is 'Saint Ella', the string 'Ella' will be returned.<br />
+ *
+ * @returns {string|undefined}
+ */
 function getTodayEphemerisName() {
 
-  //TODO
-  return undefined
+  today = new Date();
+
+  return getEphemerisName(today.getDate(), today.getMonth() + 1);
 }
-
-
-{
-
-    console.log(source);
-};
