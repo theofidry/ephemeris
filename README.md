@@ -12,12 +12,13 @@ La liste des épéhémérides est actuellement disponible dans le fichier JSON. 
 
 ## Structure
 
-```bash
-\-- lib  : bibliothèques Javascript, contenant notamment Jasmine
-\-- spec : spécifications Jasmine pour les tests unitaires
-\-- src  : fichiers sources de la bibliothèque
-	\-- ephemeris.json : list des éphéméride en JSON
-    \-- ephemeris.js   : wrapper Javascript
+```
+.
+├── lib  : bibliothèques Javascript, contenant notamment Jasmine
+├── spec : spécifications Jasmine pour les tests unitaires
+└── src  : fichiers sources de la bibliothèque
+    ├── ephemeris.json : list des éphéméride en JSON
+    └── ephemeris.js   : wrapper Javascript
 ```
 
 
