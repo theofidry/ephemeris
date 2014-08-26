@@ -77,4 +77,13 @@ La bibliothèque Javascript est testée avec [Jasmine](//jasmine.github.io/). Po
 
 ### Changelog
 
-* 8 août : premier push avec une version en JSON et une librairie JavaScript. Projet rendu en package Bower.
+* **26 août** : v.1.0.1 (no rétro-compatible)
+  * correction d'un éphéméride du mois d'août
+  * réorganisation de la bibliothèque JavaScript
+  * version compressée de la bibliothèque JavaScript ajoutée
+  
+* **8 août** : v1.0.0
+  * éphéméride en JSON
+  * bibliothèque JavaScript (non compressée)
+  * tests unitaires JavaScript avec Jasmine
+  * package Bower disponible
