@@ -37,15 +37,15 @@ Importez le fichier `ephemeris.js`.
 Pour avoir l'éphéméride du jour :
 
 ```javascript
-getTodayEphemeris();		// ex: 'Saint Basile'
-getTodayEphemerisName();	// ex: 'Basile'
+ephemeris.getTodayEphemeris();		// ex: 'Saint Basile'
+ephemeris.getTodayEphemerisName();	// ex: 'Basile'
 ```
 
 Pour avoir l'éphéméride d'un jour particulier :
 
 ```javascript
-getEphemeris(2, 1);		// retourne 'Saint Basile'
-getEphemerisName(2, 1);	// retourne 'Basile'
+ephemeris.getEphemeris(2, 1);		// retourne 'Saint Basile'
+ephemeris.getEphemerisName(2, 1);	// retourne 'Basile'
 ```
 
 Si le jour ou le mois demandé est incorrect, la valeur `undefined` sera retournée.
@@ -53,11 +53,17 @@ Si le jour ou le mois demandé est incorrect, la valeur `undefined` sera retourn
 
 ## Contribuer
 
-Actuellement seul un wrapper Javascript est disponible. Il serait intéressant d'en faire dans d'autres langages.
+### Todo
 
-La liste des éphémérides varie beaucoup d'une source à une autre, car il existe en fait une multitude de calendrier (Catholique, Romain, ...) ainsi que des calendriers des fêtes. Actuellement le calendrier a été complété avec cette [source](http://www.quelprenom.com/fetes.php?mois=1).
+* Actuellement seul un wrapper Javascript est disponible. Il serait intéressant d'en faire dans d'autres langages.
+* La liste des éphémérides varie beaucoup d'une source à une autre, car il existe en fait une multitude de calendrier (Catholique, Romain, ...) ainsi que des calendriers des fêtes. Actuellement le calendrier a été complété avec cette [source](http://www.quelprenom.com/fetes.php?mois=1).
+* Le cas où il y a plusieurs éphémérides le même jour est aussi à traiter, actuellement un seul nom a été selectionné.
 
-Le cas où il y a plusieurs éphémérides le même jour est aussi à traiter, actuellement un seul nom a été selectionné.
+### Avant de push
+
+* Ne pas oublier d'implémenter les tests cases dans le dossier `spec`. Pour plus d'information concernant les tests unitaires, voir la [documentation officiel de Jasmine](//jasmine.github.io/2.0/introduction.html). Pour voir les résultats, ouvrir le fichier `SpecRunner.html`.
+* Si des modifications sont faites sur les éphémérides sources, ne pas oubliée et les mettres à jour ailleurs (ex le ephemeris.source pour le JavaScript).
+* Ne pas oublier de mettre à jour le changelog :)
 
 ### Bower
 
@@ -68,3 +74,7 @@ Pour le versions, le premier chiffre correspond à une mise à jour majeure (ajo
 ### Javascript
 
 La bibliothèque Javascript est testée avec [Jasmine](//jasmine.github.io/). Pour lancer les tests unitaires, accéder au fichier `SpecRunner.html`. Les specs sont implémentées dans le dossier `spec`. Pour plus d'information sur Jasmine, consulter leur site [site officiel](//jasmine.github.io/).
+
+### Changelog
+
+* 8 août : premier push avec une version en JSON et une librairie JavaScript. Projet rendu en package Bower.
