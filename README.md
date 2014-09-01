@@ -25,7 +25,7 @@ La liste des épéhémérides est actuellement disponible dans le fichier JSON. 
 ## Installation
 
 ```bash
-bower install ephemeris
+bower install ephemeris --save-dev
 ```
 
 ## Utilisation
